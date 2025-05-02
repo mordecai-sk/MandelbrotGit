@@ -94,45 +94,45 @@ void ComplexPlane::iterationsToRGB(size_t count, Uint8& r, Uint8& g, Uint8& b)
 {
     if (count == MAX_ITER)
     {
-        r = 0; 
-        g = 0; 
-        b = 0; // Black for points inside the set
+        r = 0;
+        g = 0;
+        b = 0;
     }
     else if (count > 53)
     {
-        r = 255; 
-        g = 255; 
-        b = 0; // Bright yellow
+        r = 32;
+        g = 0;
+        b = 255;
     }
     else if (count > 43)
     {
-        r = 255;
-        g = 165 + (count - 44) * 9; // Transition from orange to yellow
-        b = 0;
+        r = 28;
+        g = 66 + (53 - count) * 5;
+        g = 203;
     }
     else if (count > 32)
     {
-        r = 255 - (43 - count) * 10; // Red to orange
-        g = 69;
-        b = 0;
+        r = 112 + (43 - count) * 5;
+        g = 127;
+        b = 111;
     }
     else if (count > 21)
     {
-        r = 75;
-        g = 0;
-        b = 130 + (count - 22) * 6; // Indigo to violet
+        r = 224;
+        g = 206 - (32 - count) * 5;
+        b = 52;
     }
     else if (count > 11)
     {
-        r = 0;
-        g = 191 - (21 - count) * 15; // Teal to cyan
-        b = 255;
+        r = 28;
+        g = 66 - (21 - count) * 5;
+        b = 203;
     }
     else
     {
-        r = 0;
-        g = 0;
-        b = 255 - count * 20; // Deep blue to lighter blue
+        r = 91;
+        g = 130;
+        b = 121 + (11 - count) * 5;
     }
 }
 
