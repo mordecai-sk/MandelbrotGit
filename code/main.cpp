@@ -9,6 +9,11 @@ VideoMode vm(pixelWidth, pixelHeight);
 RenderWindow window(vm, "Mandelbrot Set", Style::Default);
 
     Font arial;
+    if (!arial.loadFromFile("arial.ttf"))
+    {
+        cout << "Error loading font!" << endl;
+        return 1;
+    }
 
     Text ss;
     ss.setFont(arial);
