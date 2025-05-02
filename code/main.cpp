@@ -8,15 +8,15 @@ VideoMode vm(pixelWidth, pixelHeight);
 
 RenderWindow window(vm, "Mandelbrot Set", Style::Default);
 
-    Font arial;
-    if (!arial.loadFromFile("arial.ttf"))
+    Font Arial;
+    if (!Arial.loadFromFile("fonts/Arial.ttf"))
     {
         cout << "Error loading font!" << endl;
         return 1;
     }
 
     Text ss;
-    ss.setFont(arial);
+    ss.setFont(Arial);
     ss.setCharacterSize(14);
     ss.setFillColor(Color::White);
 
